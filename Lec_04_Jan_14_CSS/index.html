@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main section nav {
+            /* border: 1px solid; */
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        .main section nav .left {
+            font-size: x-large;
+            font-weight: bolder;
+            margin-left: .5rem;
+        }
+
+        .main section nav .right {
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+        }
+
+        .comman-btn {
+            padding: 3px 16px;
+            font-weight: 700;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+
+        .main section nav .right button:hover {
+
+            background-color: rgb(99, 99, 237);
+        }
+
+        .signup-btn {
+            background-color: rgb(142, 142, 220);
+        }
+
+        .main section nav .right a {
+            text-decoration: none;
+        }
+
+        /* sidebar start */
+
+        aside {
+            border: 1px solid;
+            width: 12rem;
+            background: #f1f1b4;
+            height: calc(100vh - 60px);
+            position: absolute;
+            transition: .5s ease;
+        }
+
+        aside ul {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            PADDING-TOP: 3REM;
+        }
+
+        aside ul li {
+            text-align: center;
+            list-style: none;
+        }
+
+        aside .toggle {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            cursor: pointer;
+        }
+
+        .hide {
+            margin-left: -9rem;
+        }
+
+        @media (max-width: 768px) {
+            .main section nav .right a {
+                display: none;
+            }
+        }
+
+
+        /* hero section start */
+        .hero {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            height: 90vh;
+        }
+
+        .hero .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 3rem;padding-left: 4rem;
+            gap: 1rem;
+        }
+
+        .hero .left .content h2 {
+            font-size: 28;
+        }
+
+        .hero .left .comman-btn {
+            width: 9rem;
+            padding: 8px;
+            background: #8787c9;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .hero .right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <section>
+            <nav>
+                <div class="left">LOGO</div>
+                <div class="right">
+                    <a href="contact.html">Home</a>
+                    <a href="blogs.html">Contact</a>
+                    <a href="services.html">Services</a>
+                    <button class="comman-btn login-btn">Login</button>
+                    <button class="comman-btn signup-btn">Signup</button>
+                </div>
+            </nav>
+            <!-- sidebar -->
+            <div style="display: flex;">
+                <aside>
+                    <div class="toggle"><i class="fa fa-bars"></i></div>
+                    <ul>
+                        <li>One</li>
+                        <li>Two</li>
+                        <li>Three</li>
+                        <li>Four</li>
+                        <li>Five</li>
+                    </ul>
+                </aside>
+                <div class="hero">
+                    <div class="left">
+                        <div class="content">
+                            <h1>Revolutionize Your Academic Writing Workflow With ACADLANCE</h1>
+                        </div>
+                        <p>Our platform is a perfect blend for both experts and clients! Experts can showcase their
+                            skills and secure fair pay, while clients can access top-tier experts and streamline
+                            projects effortlessly.</p>
+                        <button class="comman-btn">
+                            GET STARTED
+                        </button>
+                    </div>
+                    <div class="right">
+                        <img src="womanlaptop.webp" alt="my-image" height="300">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.querySelector('.toggle').addEventListener('click', () => {
+            //    document.querySelector('aside').style.display='none'
+            // document.querySelector('aside').classList.add('hide')
+            document.querySelector('aside').classList.toggle('hide')
+        })
+    </script>
+</body>
+
+</html>
