@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>DOM Manipulation</h2>
+
+
+    <button id="red">red</button>
+    <button onmouseenter="mouseenter()" onmouseleave="mouseleave()" onclick="clickfn()">yellow</button>
+    <button>blue</button>
+
+    <br><br>
+
+    <input type="text" name="name" placeholder="name" id="namefield">
+
+    <section class="outer" style="background-color: yellow;">
+        <p>one</p>
+        <p>two</p>
+        <p>three</p>
+    </section>
+
+    <script>
+
+        // create h3='my h3' tag and insert into section,  innerText vs innerHTML
+        let section=document.querySelector('.outer')
+        // let h3=document.createElement('h3')
+        // h3.innerText='my h3'
+        let p=document.createElement('p')
+        // p.innerText='<h2>my paragraph</h2>'
+        p.innerHTML='<h2>my paragraph</h2>'
+
+        // section.appendChild(p)  // insert at last
+        section.insertAdjacentElement('afterbegin',p)
+
+        // load event
+        // window.addEventListener('load', () => {
+        //     console.log('load event running')
+        // })
+
+        // change event
+        let name = document.getElementById('namefield')
+        name.addEventListener('change', (e) => {
+            console.log(e.target.value)
+        })
+
+        function mouseenter() {
+            console.log('mouseenter runs..')
+        }
+        function mouseleave() {
+            console.log('mouseleave runs..')
+        }
+        function clickfn() {
+            console.log('click runs..')
+        }
+
+
+        // selectors 
+
+        // consle all p's content
+        const paragraphs = document.querySelectorAll('section p')
+        paragraphs.forEach(element => {
+            // console.log(element.innerHTML)
+            console.log(element.innerText)
+        });
+
+        let red = document.getElementById('red')
+        red.addEventListener('click', () => {
+            red.style.color = 'red'
+        })
+    </script>
+</body>
+
+</html>
