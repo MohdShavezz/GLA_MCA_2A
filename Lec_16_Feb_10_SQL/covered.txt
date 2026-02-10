@@ -1,0 +1,5 @@
+sql constrains
+relationship between tables (1:1, 1:m, m:m)
+primary/foreign key
+joins (inner,left,right,full outer)
+
