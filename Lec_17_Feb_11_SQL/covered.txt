@@ -1,0 +1,6 @@
+SQL: interview questoins with aggregate function group by and subqueries
+NodeJs: Intro Callback Execution Order Event drivent architecture blocking/non-blocking io op. event loop priority queues
+
+reference:
+
+Node.js PPT: https://1drv.ms/p/c/7f036de033caac6e/IQA2QkrxSxAsS59JY8yl4heCAYMWRzzqqFdw128eukXJKLA?e=EXrpcW
