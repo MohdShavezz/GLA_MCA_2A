@@ -1,0 +1,11 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: pink;
+    padding: 1rem;
+}
+nav .right{
+        display: flex;
+    gap: 1rem;
+}
+
